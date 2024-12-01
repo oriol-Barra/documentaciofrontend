@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentació del Component LligaTaula</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section h2 {
+            color: #5a5a5a;
+        }
+        .propietat {
+            margin-bottom: 10px;
+        }
+        .propietat span {
+            font-weight: bold;
+        }
+        .propietat p {
+            margin: 5px 0;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Documentació del Component: <em>LligaTaula</em></h1>
+
+    <div class="section">
+        <h2>Descripció</h2>
+        <p>
+            Aquest component carrega la taula de partides i classificació d'una lliga. Mostra la informació sobre les partides jugades i la classificació dels jugadors.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Propietats</h2>
+
+        <div class="propietat">
+            <span>lligaNom</span> (String)<br>
+            <p><strong>Descripció:</strong> Nom de la lliga.</p>
+            <p><strong>Requerit:</strong> Sí</p>
+        </div>
+
+        <div class="propietat">
+            <span>partides</span> (Array)<br>
+            <p><strong>Descripció:</strong> Llista d'objectes que conté la informació de les partides jugades.</p>
+            <p><strong>Requerit:</strong> Sí</p>
+        </div>
+
+        <div class="propietat">
+            <span>classificacio</span> (Array)<br>
+            <p><strong>Descripció:</strong> Llista d'objectes que conté la classificació dels jugadors.</p>
+            <p><strong>Requerit:</strong> Sí</p>
+        </div>
+    </div>
+    <footer>
+        <p><a href="../documentaciojugaripunt.html">torna a la pàgina d'inici</a></p>
+      </footer>
+</body>
+</html>

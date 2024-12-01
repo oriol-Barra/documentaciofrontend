@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentació: DescarregarResultats</title>
+</head>
+<body>
+  <h1>Documentació de la pàgina: <code>DescarregarResultats</code></h1>
+
+  <h2>Descripció general</h2>
+  <p>
+    Aquesta pàgina permet a l'usuari seleccionar una lliga per descarregar els resultats associats en un arxiu ZIP. L'usuari pot seleccionar 
+    la lliga des d'un formulari, i en fer-ho, es genera un arxiu ZIP amb els resultats de la lliga seleccionada per a la seva descàrrega.
+  </p>
+
+  <h2>Estructura del component</h2>
+
+  <h3>Propietats (Data)</h3>
+  <ul>
+    <li><strong>lliga_escollida:</strong> Identificador de la lliga seleccionada per l'usuari (string o número).</li>
+    <li><strong>partida_escollida:</strong> Identificador de la partida seleccionada (string o número).</li>
+    <li><strong>jugador_guanyador:</strong> Jugador guanyador de la partida seleccionada (string o número).</li>
+    <li><strong>lligues:</strong> Llistat de les lligues disponibles per seleccionar (Array d'objectes amb les propietats <code>label</code> i <code>value</code>).</li>
+    <li><strong>partides:</strong> Llistat de les partides d'una lliga específica (Array).</li>
+    <li><strong>jugadors:</strong> Llistat de jugadors associats a la lliga seleccionada (Array).</li>
+  </ul>
+
+  <h3>Metodes</h3>
+  <h4>buscarLligues</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode recupera la llista de lligues disponibles des del backend i les afegeix a l'array 
+    <code>lligues</code> per mostrar-les en el formulari de selecció. La llista de lligues és obtinguda mitjançant una crida a l'API.
+  </p>
+
+  <h4>descarregarResultats</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode permet descarregar els resultats de la lliga seleccionada per l'usuari. Fa una crida 
+    a l'API per obtenir els resultats i els desa en un arxiu ZIP que es descarrega automàticament al dispositiu de l'usuari.
+  </p>
+
+  <h2>Estils (CSS)</h2>
+  <p>
+    Els estils d'aquesta pàgina utilitzen les classes d'utilitat de <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> 
+    per gestionar l'aspecte visual. El component fa servir classes com <code>.bg-white</code>, <code>.p-8</code>, <code>.rounded-lg</code> 
+    per donar estil als elements visuals de la pàgina.
+  </p>
+  <footer>
+    <p><a href="../documentaciojugaripunt.html">torna a la pàgina d'inici</a></p>
+  </footer>
+</body>
+</html>

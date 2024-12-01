@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentació: RankingPage</title>
+</head>
+<body>
+  <h1>Documentació de la pàgina: <code>RankingPage</code></h1>
+
+  <h2>Descripció general</h2>
+  <p>
+    Aquesta pàgina mostra el rànquing de jugadors ordenats per les seves puntuacions. Els jugadors es mostren en una taula amb les 
+    següents columnes: Posició, Nom, Cognoms i Puntuació. La informació es carrega des d'una API i es presenta de manera dinàmica.
+  </p>
+
+  <h2>Estructura del component</h2>
+
+  <h3>Propietats (Data)</h3>
+  <ul>
+    <li><strong>ranking:</strong> Llistat dels jugadors amb la seva posició, nom, cognoms i puntuació (Array).</li>
+  </ul>
+
+  <h3>Metodes</h3>
+  <h4>mounted</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode s'executa quan el component es munta. Realitza una sol·licitud GET a l'API per obtenir 
+    el rànquing de jugadors. Aquesta informació es desa a la propietat <code>ranking</code>, que posteriorment es mostra a la taula 
+    dins de la pàgina.
+  </p>
+
+  <h2>Estils (CSS)</h2>
+  <p>
+    Aquesta pàgina utilitza estils CSS personalitzats per a la taula. Les classes inclouen:
+    <ul>
+      <li><strong>.table-auto:</strong> Estil per a una taula amb una amplada del 100% i les cel·les col·lapsades.</li>
+      <li><strong>.border:</strong> Afegit una vora de 1px de color gris clar a les cel·les de la taula.</li>
+      <li><strong>.px-4:</strong> Afegit de padding horitzontal (1rem) a les cel·les de la taula.</li>
+      <li><strong>.py-2:</strong> Afegit de padding vertical (0.5rem) a les cel·les de la taula.</li>
+    </ul>
+  </p>
+  <footer>
+    <p><a href="../documentaciojugaripunt.html">torna a la pàgina d'inici</a></p>
+  </footer>
+</body>
+</html>

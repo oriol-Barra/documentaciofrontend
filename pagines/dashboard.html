@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentació: DashboardPage</title>
+</head>
+<body>
+  <h1>Documentació de la pàgina: <code>DashboardPage</code></h1>
+
+  <h2>Descripció general</h2>
+  <p>
+    Aquesta pàgina mostra les dades personals de l'usuari i les lligues en les quals està inscrit. Permet consultar informació detallada 
+    de l'usuari, com el nom, els cognoms, l'email, l'edat, el número de federat i si té privilegis d'administrador. A més, l'usuari pot 
+    veure les lligues a les quals està inscrit i obtenir detalls sobre les partides i la classificació dels jugadors per cada lliga.
+  </p>
+
+  <h2>Estructura del component</h2>
+
+  <h3>Propietats (Data)</h3>
+  <ul>
+    <li><strong>userData:</strong> Objecte que conté les dades de l'usuari. Inclou les següents subpropietats:
+      <ul>
+        <li><strong>userData.nom:</strong> Nom de l'usuari (string).</li>
+        <li><strong>userData.cognoms:</strong> Cognoms de l'usuari (string).</li>
+        <li><strong>userData.email:</strong> Correu electrònic de l'usuari (string).</li>
+        <li><strong>userData.edat:</strong> Edat de l'usuari (número).</li>
+        <li><strong>userData.num_federat:</strong> Número de federat de l'usuari (número).</li>
+        <li><strong>userData.admin:</strong> Valor booleà que indica si l'usuari és administrador (boolean).</li>
+        <li><strong>userData.lligues:</strong> Llistat de les lligues on l'usuari està inscrit (Array).</li>
+      </ul>
+    </li>
+    <li><strong>partides:</strong> Llistat de les partides d'una lliga específica (Array).</li>
+    <li><strong>tipusTorneig:</strong> Tipus de torneig seleccionat (Lliga o TorneigEliminatori) (string).</li>
+    <li><strong>jugadors:</strong> Llistat de jugadors amb la classificació d'una lliga (Array).</li>
+  </ul>
+
+  <h3>Metodes</h3>
+  <h4>getUserData</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode obté les dades de l'usuari des d'una API. Utilitza l'ID de l'usuari emmagatzemat en el 
+    localStorage per realitzar la sol·licitud a l'API i omple l'objecte <code>userData</code> amb la resposta.
+  </p>
+
+  <h4>onLligaClick</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode gestiona el clic en una lliga per obtenir les partides associades a aquesta lliga i 
+    actualitzar la classificació dels jugadors. Quan l'usuari selecciona una lliga, el sistema realitza una sol·licitud a l'API per 
+    obtenir les dades relacionades amb la lliga seleccionada.
+  </p>
+
+  <h2>Estils (CSS)</h2>
+  <p>
+    Els estils d'aquesta pàgina utilitzen classes d'utilitat de Tailwind CSS per gestionar l'aspecte visual. S'han definit algunes 
+    classes personalitzades per gestionar l'alineació del text, com <code>.text-left</code> i <code>.text-center</code>.
+  </p>
+  <footer>
+    <p><a href="../documentaciojugaripunt.html">torna a la pàgina d'inici</a></p>
+  </footer>
+</body>
+</html>

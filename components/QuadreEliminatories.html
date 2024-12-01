@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentació del Component QuadreEliminatories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section h2 {
+            color: #5a5a5a;
+        }
+        .propietat {
+            margin-bottom: 10px;
+        }
+        .propietat span {
+            font-weight: bold;
+        }
+        .propietat p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Documentació del Component: <em>QuadreEliminatories</em></h1>
+
+    <div class="section">
+        <h2>Descripció</h2>
+        <p>
+            Aquest component genera un quadre per a tornejos eliminatoris. El component rep una llista de partides i organitza aquestes partides en rondes eliminatòries successives fins que es determina un guanyador final.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Propietats</h2>
+
+        <div class="propietat">
+            <span>partides</span> (Array)<br>
+            <p><strong>Descripció:</strong> Llista de partides que es jugaran en el torneig. Cada partida és un objecte amb els jugadors involucrats.</p>
+            <p><strong>Requerit:</strong> Sí</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Propietats de Dades Internes</h2>
+
+        <div class="propietat">
+            <span>rondas</span> (Array)<br>
+            <p><strong>Descripció:</strong> Llista de rondes generades durant el procés de creació del torneig. Conté les partides de cada ronda.</p>
+            <p><strong>Requerit:</strong> No (es crea automàticament)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Mètodes</h2>
+
+        <div class="propietat">
+            <span>organizarRondas</span> (Métode)<br>
+            <p><strong>Descripció:</strong> Organitza les partides en rondes de tipus eliminatori. Aquest mètode divideix les partides en rondes successives, on cada ronda conté els guanyadors de la ronda anterior. El procés continua fins que només queda una ronda, la final, amb un guanyador. Les rondes generades es guarden en la propietat <code>rondas</code>.</p>
+            <p><strong>Paràmetres:</strong> Cap</p>
+            <p><strong>Retorna:</strong> <code>void</code></p>
+        </div>
+
+        <div class="propietat">
+            <span>generarPartidosSiguientes</span> (Métode)<br>
+            <p><strong>Descripció:</strong> Genera els següents partits a partir de les partides actuals (cruces). Aquest mètode pren una llista de partides de la ronda anterior i crea nous partits per a la ronda següent. Els partits es generen mitjançant la selecció de jugadors guanyadors de les partides anteriors. Si hi ha un nombre imparell de jugadors, el segon jugador d'un partit serà <code>null</code> per representar un jugador que no té oponent.</p>
+            <p><strong>Paràmetres:</strong> <code>partidos</code> (Array): Llista de partides de la ronda actual. Cada element conté <code>jugador1</code> i <code>jugador2</code>.</p>
+            <p><strong>Retorna:</strong> <code>Array</code>: Llista de partides generades per a la següent ronda.</p>
+        </div>
+    </div>
+    <footer>
+        <p><a href="../documentaciojugaripunt.html">torna a la pàgina d'inici</a></p>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentació: RegistreUsuari</title>
+</head>
+<body>
+  <h1>Documentació de la pàgina: <code>RegistreUsuari</code></h1>
+
+  <h2>Descripció general</h2>
+  <p>
+    Aquesta pàgina gestiona el registre d'un nou usuari en el sistema. Permet a l'usuari introduir les seves dades personals 
+    (email, contrasenya, nom, cognoms, edat, número de federat i si és administrador) i valida que les contrasenyes coincideixin abans 
+    d'enviar-les al servidor per completar el registre.
+  </p>
+
+  <h2>Estructura del component</h2>
+
+  <h3>Propietats (Data)</h3>
+  <ul>
+    <li><strong>email:</strong> Correu electrònic de l'usuari (String).</li>
+    <li><strong>password:</strong> Contrasenya introduïda per l'usuari (String).</li>
+    <li><strong>passwordRepeat:</strong> Repeteix la contrasenya per confirmar-la (String).</li>
+    <li><strong>nom:</strong> Nom de l'usuari (String).</li>
+    <li><strong>cognoms:</strong> Cognoms de l'usuari (String).</li>
+    <li><strong>edat:</strong> Edat de l'usuari (String).</li>
+    <li><strong>num_federat:</strong> Número de federat de l'usuari (String).</li>
+    <li><strong>isAdmin:</strong> Indica si l'usuari és administrador (String, amb valors "True" o "False").</li>
+  </ul>
+
+  <h3>Metodes</h3>
+  <h4>submit</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode s'executa quan l'usuari envia el formulari de registre. 
+    Valida que les contrasenyes coincideixin i envia les dades al servidor per registrar l'usuari. 
+    Si el registre és exitós, es reseteja el formulari i es mostra un missatge de confirmació. Si ocorre un error, es mostra un missatge d'error.
+  </p>
+
+  <h2>Estils (CSS)</h2>
+  <p>
+    Aquesta pàgina utilitza estils CSS personalitzats per als formularis. Les classes inclouen:
+    <ul>
+      <li><strong>.form-input:</strong> Aplica estils a tots els inputs, com a marges i la forma dels camps.</li>
+      <li><strong>.bg-white:</strong> Fons blanc per al contenidor principal de la pàgina.</li>
+      <li><strong>.rounded:</strong> Bordes arrodonits per als inputs i els botons.</li>
+      <li><strong>.shadow-lg:</strong> Aplicació d'una ombra per donar un efecte de profunditat al formulari.</li>
+      <li><strong>.px-4:</strong> Padding horitzontal (1rem) per als camps d'entrada i els botons.</li>
+      <li><strong>.py-2:</strong> Padding vertical (0.5rem) per als camps d'entrada i els botons.</li>
+      <li><strong>.bg-blue-500:</strong> Color de fons blau per als botons.</li>
+      <li><strong>.hover:bg-blue-700:</strong> Efecte de canvi de color al passar el cursor sobre els botons.</li>
+    </ul>
+  </p>
+  <footer>
+    <p><a href="../documentaciojugaripunt.html">torna a la pàgina d'inici</a></p>
+  </footer>
+</body>
+</html>

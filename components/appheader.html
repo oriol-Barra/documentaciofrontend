@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentació del Component AppHeader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section h2 {
+            color: #5a5a5a;
+        }
+        .propietat {
+            margin-bottom: 10px;
+        }
+        .propietat span {
+            font-weight: bold;
+        }
+        .propietat p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Documentació del Component: <em>AppHeader</em></h1>
+
+    <div class="section">
+        <h2>Descripció</h2>
+        <p>
+            Aquest component carrega el capçal (header) de l'aplicació. Conté un enllaç de navegació cap a la pàgina d'inici i una sèrie de botons per accedir a diferents seccions com el perfil, el dashboard, les estadístiques, i més, en funció de si l'usuari està autenticat. A més, si l'usuari és administrador, es poden mostrar més opcions com crear lligues o veure els resultats de partides.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Propietats</h2>
+
+        <div class="propietat">
+            <span>isAuthenticated</span><br>
+            <p><strong>Descripció:</strong> Estat per verificar si l'usuari està autenticat.</p>
+            <p><strong>Tipus:</strong> Boolean</p>
+            <p><strong>Valor per defecte:</strong> false</p>
+        </div>
+
+        <div class="propietat">
+            <span>isAdmin</span><br>
+            <p><strong>Descripció:</strong> Estat per verificar si l'usuari és administrador.</p>
+            <p><strong>Tipus:</strong> Boolean</p>
+            <p><strong>Valor per defecte:</strong> true</p>
+        </div>
+
+        <div class="propietat">
+            <span>menuIsOpen</span><br>
+            <p><strong>Descripció:</strong> Estat que determina si el menú està obert o tancat.</p>
+            <p><strong>Tipus:</strong> Boolean</p>
+            <p><strong>Valor per defecte:</strong> false</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Mètodes</h2>
+
+        <div class="propietat">
+            <span>checkAuthentication</span><br>
+            <p><strong>Descripció:</strong> Comprova si l'usuari està autenticat revisant si existeix un token a `localStorage`. Actualitza l'estat de `isAuthenticated` segons el token trobat.</p>
+            <p><strong>Tipus:</strong> Mètode</p>
+        </div>
+
+        <div class="propietat">
+            <span>checkIsAdmin</span><br>
+            <p><strong>Descripció:</strong> Comprova si l'usuari és administrador revisant el valor de `admin` a `localStorage`. Actualitza l'estat de `isAdmin` basant-se en el valor trobat a `localStorage`.</p>
+            <p><strong>Tipus:</strong> Mètode</p>
+        </div>
+
+        <div class="propietat">
+            <span>logout</span><br>
+            <p><strong>Descripció:</strong> Realitza la desconnexió de l'usuari eliminant el token d'autenticació de `localStorage`, enviant una sol·licitud de logout a l'API i redirigint a la pàgina de login.</p>
+            <p><strong>Tipus:</strong> Mètode</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Comportament i Funcionalitat</h2>
+        <p>
+            El component `AppHeader` es mostra en totes les pàgines per proporcionar una interfície consistent. Si l'usuari està autenticat, es mostra un menú amb diverses opcions (dashboard, perfil, estadístiques, etc.). Si l'usuari és administrador, es poden mostrar més opcions com crear lligues o veure els resultats de partides. En cas que l'usuari no estigui autenticat, es mostren botons per registrar-se o iniciar sessió.
+        </p>
+    </div>
+    <footer>
+        <p><a href="../documentaciojugaripunt.html">torna a la pàgina d'inici</a></p>
+      </footer>
+
+</body>
+</html>

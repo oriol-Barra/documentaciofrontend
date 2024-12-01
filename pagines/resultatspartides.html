@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentació: ResultatsPartides</title>
+</head>
+<body>
+  <h1>Documentació de la pàgina: <code>ResultatsPartides</code></h1>
+
+  <h2>Descripció general</h2>
+  <p>
+    Aquesta pàgina gestiona la selecció de partides, jugadors i resultats per a una lliga. Permet a l'usuari seleccionar una lliga,
+    una partida, un guanyador i enviar els resultats a l'API per ser registrats.
+  </p>
+
+  <h2>Estructura del component</h2>
+
+  <h3>Propietats (Data)</h3>
+  <ul>
+    <li><strong>partida_escollida:</strong> Emmagatzema la partida seleccionada per l'usuari (String).</li>
+    <li><strong>jugador_guanyador:</strong> Emmagatzema el jugador guanyador seleccionat (String).</li>
+    <li><strong>lliga_seleccionada:</strong> Emmagatzema la lliga seleccionada per l'usuari (String).</li>
+    <li><strong>partides:</strong> Llista de partides disponibles que es carrega segons la lliga seleccionada (Array).</li>
+    <li><strong>jugadors:</strong> Llista de jugadors disponibles per a la partida seleccionada (Array).</li>
+    <li><strong>lligues:</strong> Llista de lligues disponibles que es carrega al carregar la pàgina (Array).</li>
+  </ul>
+
+  <h3>Metodes</h3>
+
+  <h4>buscarLligues</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode realitza una sol·licitud a l'API per obtenir les lligues disponibles i les afegeix
+    a la llista `lligues`. Aquest mètode s'executa quan el component es carrega.
+  </p>
+
+  <h4>buscarPartides</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode realitza una sol·licitud a l'API per obtenir les partides disponibles per a la
+    lliga seleccionada. Afegeix les partides a la llista `partides` i filtra les partides que corresponen a la lliga seleccionada.
+  </p>
+
+  <h4>onSelectPartida</h4>
+  <p>
+    <strong>Descripció:</strong> Quan l'usuari selecciona una partida, aquest mètode obté els jugadors disponibles per a la partida
+    seleccionada i actualitza la llista `jugadors` amb les opcions de guanyador possibles (jugador 1, jugador 2 o empat).
+  </p>
+
+  <h4>enviarResultats</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode envia els resultats seleccionats (partida i guanyador) a l'API per ser registrats.
+    Si l'operació és exitosa, mostra un missatge de confirmació. Si ocorre un error, mostra un missatge d'error.
+  </p>
+
+  <h4>getResultatsLliga</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode obtingut els resultats per a una lliga específica, passant la lliga seleccionada com
+    a paràmetre a l'API per obtenir els resultats d'aquesta lliga.
+  </p>
+
+  <h2>Estils (CSS)</h2>
+  <p>
+    Aquesta pàgina utilitza estils CSS per a la maquetació i disseny de la interfície, com per exemple:
+    <ul>
+      <li><strong>.bg-white:</strong> Fons blanc per a la secció del formulari.</li>
+      <li><strong>.text-center:</strong> Centra el text a la pàgina.</li>
+      <li><strong>.p-8:</strong> Padding (espai interior) de 2rem per als elements del formulari.</li>
+      <li><strong>.rounded-lg:</strong> Bordes arrodonits per als elements del formulari.</li>
+      <li><strong>.shadow-lg:</strong> Sombra gran per donar profunditat a la secció del formulari.</li>
+      <li><strong>.mb-8:</strong> Margin inferior de 2rem per separar el títol del formulari.</li>
+      <li><strong>.w-full:</strong> Amplada total per als botons i formularis.</li>
+      <li><strong>.bg-blue-500:</strong> Color de fons blau per als botons.</li>
+      <li><strong>.hover:bg-blue-700:</strong> Efecte de canvi de color al passar el cursor sobre els botons.</li>
+      <li><strong>.space-y-8:</strong> Espai vertical entre els diferents grups del formulari (per exemple, entre els camps de selecció de lliga i guanyador).</li>
+    </ul>
+  </p>
+  <footer>
+    <p><a href="../documentaciojugaripunt.html">torna a la pàgina d'inici</a></p>
+  </footer>
+</body>
+</html>

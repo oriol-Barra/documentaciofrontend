@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentació: IniciarSessio</title>
+</head>
+<body>
+  <h1>Documentació de la pàgina: <code>IniciarSessio</code></h1>
+
+  <h2>Descripció general</h2>
+  <p>
+    Aquesta pàgina permet a l'usuari iniciar sessió en el sistema mitjançant les seves credencials (email i contrasenya).
+    En cas que les credencials siguin correctes, el sistema guarda les dades de l'usuari, inclòs el token d'autenticació, 
+    i redirigeix l'usuari a la pàgina del seu tauler de control (<code>/dashboardPage</code>).
+  </p>
+
+  <h2>Estructura del component</h2>
+
+  <h3>Propietats (Data)</h3>
+  <ul>
+    <li><strong>email:</strong> Correu electrònic de l'usuari (string).</li>
+    <li><strong>password:</strong> Contrasenya de l'usuari (string).</li>
+  </ul>
+
+  <h3>Metodes</h3>
+  <h4>submit</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode s'encarrega de gestionar el procés d'inici de sessió de l'usuari. 
+    Realitza una sol·licitud POST al servidor amb les credencials de l'usuari (email i contrasenya) i, si la resposta és positiva 
+    (status 200), guarda la informació de l'usuari al <code>localStorage</code> (incloent el token d'autenticació, ID de l'usuari, 
+    nom de l'usuari i l'estat d'administrador). Després, neteja els camps del formulari i redirigeix a la pàgina de l'usuari 
+    (<code>/dashboardPage</code>). En cas d'error, es mostra un missatge a l'usuari.
+  </p>
+
+  <h2>Estils (CSS)</h2>
+  <p>
+    Aquesta pàgina utilitza les classes d'utilitat de <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> per 
+    donar estil als elements visuals. Les classes utilitzades inclouen <code>.bg-white</code>, <code>.p-8</code>, <code>.rounded-lg</code>,
+    <code>.shadow-lg</code>, entre altres per a donar forma i estil a la pàgina.
+  </p>
+  <footer>
+    <p><a href="../documentaciojugaripunt.html">torna a la pàgina d'inici</a></p>
+  </footer>
+</body>
+</html>

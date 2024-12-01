@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentació: Cerca de Jugador</title>
+</head>
+<body>
+  <h1>Documentació de la pàgina: <code>afegeixjugadors</code></h1>
+  <h2>Descripció general</h2>
+  <p>
+    Aquesta pàgina permet cercar jugadors a la base de dades, afegir-los a una lliga i registrar el torneig. 
+    Els usuaris poden cercar un jugador pel seu nom, seleccionar-los, i després afegir-los a una lliga. Quan tots els jugadors 
+    necessaris per a la lliga són afegits, es pot registrar el torneig.
+  </p>
+
+  <h2>Estructura del component</h2>
+  <h3>Propietats (Data)</h3>
+  <ul>
+    <li><strong>nomJugador:</strong> Nom del jugador a cercar (string).</li>
+    <li><strong>resultats:</strong> Llista de jugadors trobats durant la cerca (Array).</li>
+    <li><strong>jugadorSeleccionat:</strong> Jugador seleccionat de la llista (Object|null).</li>
+    <li><strong>jugadorsAfegits:</strong> Llista de jugadors afegits a la lliga (Array).</li>
+    <li><strong>numJugadors:</strong> Nombre de jugadors necessaris per a la lliga (number).</li>
+    <li><strong>usuari:</strong> ID de l'usuari actual obtingut de localStorage (string).</li>
+  </ul>
+
+  <h3>Metodes</h3>
+  <h4>buscarJugador</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode cerca jugadors a la base de dades pel seu nom. Quan el camp de cerca no està buit, 
+    es fa una crida a l'API per obtenir els jugadors que coincideixin amb el nom introduït.
+  </p>
+
+
+  <h4>seleccionarJugador</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode selecciona un jugador de la llista de resultats. Si el jugador ja ha estat afegit a la lliga,
+    es mostrarà un missatge d'alerta. Si no, el jugador es fa part de la llista de jugadors afegits.
+  </p>
+ 
+
+  <h4>afegirLliga</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode envia les dades de la lliga i els jugadors seleccionats al backend per registrar la lliga o el torneig.
+    Si no s'han afegit tots els jugadors requerits, es mostrarà un missatge d'alerta. Si la creació és exitosa, es neteja la llista de jugadors afegits.
+  </p>
+
+
+  <h2>Estil (CSS)</h2>
+  <p>No es defineixen estils específics en aquest component Vue.js ja que els estils estan definits en línia amb classes d'utility de Tailwind CSS.</p>
+	 <footer>
+    <p><a href="../documentaciojugaripunt.html">torna a la pàgina d'inici</a></p>
+  </footer>
+
+</body>
+</html>

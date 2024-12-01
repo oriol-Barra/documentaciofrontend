@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentació: crealliga</title>
+</head>
+<body>
+  <h1>Documentació de la pàgina: <code>crealliga</code></h1>
+
+  <h2>Descripció general</h2>
+  <p>
+    Aquesta pàgina permet als usuaris registrar una nova lliga o torneig. El formulari inclou camps per introduir el nom de la lliga, 
+    les dates d'inici i fi, el tipus de torneig (lliga o eliminatori), i el nombre de jugadors. Un cop enviat el formulari, les dades 
+    es validen, i si són correctes, l'usuari serà redirigit a la pàgina per afegir jugadors.
+  </p>
+
+  <h2>Estructura del component</h2>
+  <h3>Propietats (Data)</h3>
+  <ul>
+    <li><strong>nomLliga:</strong> Nom de la lliga o torneig (string).</li>
+    <li><strong>dataInici:</strong> Data d'inici de la lliga o torneig (string).</li>
+    <li><strong>dataFi:</strong> Data de finalització de la lliga o torneig (string).</li>
+    <li><strong>tipusTorneig:</strong> Tipus de torneig, que pot ser "Lliga" o "TorneigEliminatori" (string).</li>
+    <li><strong>numJugadors:</strong> Nombre de jugadors que participaran en la lliga o torneig (número).</li>
+  </ul>
+
+  <h3>Metodes</h3>
+  <h4>enviarDades</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode s'executa quan l'usuari envia el formulari. Realitza una validació per comprovar que el nombre 
+    de jugadors sigui vàlid, especialment per als tornejos eliminatoris, on el nombre de jugadors ha de ser un múltiple de 4. Si la validació 
+    és correcta, l'usuari és redirigit a la pàgina de registre dels jugadors amb els paràmetres del torneig.
+  </p>
+
+  <h2>Estil (CSS)</h2>
+  <p>No es defineixen estils específics en aquest component Vue.js ja que els estils estan definits en línia amb classes d'utility de Tailwind CSS.</p>
+  <footer>
+    <p><a href="../documentaciojugaripunt.html">torna a la pàgina d'inici</a></p>
+  </footer>
+</body>
+</html>

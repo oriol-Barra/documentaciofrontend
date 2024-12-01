@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentació: RecuperarContrasenya</title>
+</head>
+<body>
+  <h1>Documentació de la pàgina: <code>RecuperarContrasenya</code></h1>
+
+  <h2>Descripció general</h2>
+  <p>
+    Aquesta pàgina gestiona el procés de recuperació de contrasenya per als usuaris. Permet que l'usuari introdueixi les seves dades 
+    (nom, cognoms, email i edat) per verificar la seva identitat. Si les dades són correctes, es mostra un formulari per actualitzar 
+    la contrasenya.
+  </p>
+
+  <h2>Estructura del component</h2>
+
+  <h3>Propietats (Data)</h3>
+  <ul>
+    <li><strong>nom:</strong> Nom de l'usuari (String).</li>
+    <li><strong>cognoms:</strong> Cognoms de l'usuari (String).</li>
+    <li><strong>email:</strong> Correu electrònic de l'usuari (String).</li>
+    <li><strong>edat:</strong> Edat de l'usuari (String).</li>
+    <li><strong>message:</strong> Missatge que es mostra a l'usuari (String).</li>
+    <li><strong>showPasswordForm:</strong> Boolean que indica si s'ha de mostrar el formulari per actualitzar la contrasenya (Boolean).</li>
+    <li><strong>novaContrasenya:</strong> Nova contrasenya introduïda per l'usuari (String).</li>
+    <li><strong>repetirNovaContrasenya:</strong> Repetició de la nova contrasenya (String).</li>
+  </ul>
+
+  <h3>Metodes</h3>
+  <h4>submit</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode s'executa quan l'usuari envia el formulari de recuperació de contrasenya. Envia una sol·licitud
+    amb les dades de l'usuari per validar-les a l'API. Si les dades són correctes, es mostra el formulari per actualitzar la contrasenya.
+  </p>
+
+  <h4>modificarContrasenya</h4>
+  <p>
+    <strong>Descripció:</strong> Aquest mètode s'executa quan l'usuari introdueix una nova contrasenya i la confirma. Comprova que les dues 
+    contrasenyes coincideixin i, si és així, realitza una sol·licitud per actualitzar la contrasenya a l'API.
+  </p>
+
+  <h2>Estils (CSS)</h2>
+  <p>
+    Aquesta pàgina utilitza estils CSS personalitzats per als formularis. Les classes inclouen:
+    <ul>
+      <li><strong>.form-input:</strong> Aplica estils a tots els inputs, com a marges i la forma dels camps.</li>
+      <li><strong>.bg-white:</strong> Fons blanc per al contenidor principal de la pàgina.</li>
+      <li><strong>.rounded:</strong> Bordes arrodonits per als inputs i els botons.</li>
+      <li><strong>.shadow-lg:</strong> Aplicació d'una ombra per donar un efecte de profunditat al formulari.</li>
+      <li><strong>.px-4:</strong> Padding horitzontal (1rem) per als camps d'entrada i els botons.</li>
+      <li><strong>.py-2:</strong> Padding vertical (0.5rem) per als camps d'entrada i els botons.</li>
+      <li><strong>.bg-blue-500:</strong> Color de fons blau per als botons.</li>
+      <li><strong>.hover:bg-blue-700:</strong> Efecte de canvi de color al passar el cursor sobre els botons.</li>
+    </ul>
+  </p>
+  <footer>
+    <p><a href="../documentaciojugaripunt.html">torna a la pàgina d'inici</a></p>
+  </footer>
+</body>
+</html>
